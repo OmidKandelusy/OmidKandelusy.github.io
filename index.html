@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1> Thanks for dropping by! </h1>
-    <h2> Bio: </h2>
-    <p> I am an Electrical Engineering PhD graduate; 
+    <!-- a header element -->
+    <header>
+        <h1 id="header_heading"> Thanks for dropping by! </h1>
+    </header>
+
+    <!-- a nav element -->
+    <nav>
+        <ul>
+            <li><a href="#bio">Home</a></li>
+
+        </ul>
+    </nav>
+
+    <p id="bio_p1" > I am an Electrical Engineering PhD graduate; 
         my education were mostly focused on theoretical analysis of
         the physical layer in wireless communication systems, and 
         communication protocols. I have experience in designing 
@@ -23,7 +35,7 @@
         in dynamic spectrum access, signal processing, coding theory,
         and federated machine learning.  </p>
 
-        <p> I am from Iran where I received my BSc and MSc in electrical
+        <p id="bio_p2"> I am from Iran where I received my BSc and MSc in electrical
             engineering. I came to US to pursue my PhD reseasrch journey 
             in 2017 and I graduated from University of New Hampshire in 2021. 
             I am currently a wireless communication engineer at Passivelogic 
@@ -31,9 +43,12 @@
             twin which will transform the efficiency of the future buildings 
             and cities. </p>    
         </p>
-    <h2> Second heading: </h2>
-    <p>  This is a paragraph under construction</p>
-
+    
 </body>
+
+<!--a footer element -->
+<footer>
+    This page is under construction.
+</footer>
 
 </html>
