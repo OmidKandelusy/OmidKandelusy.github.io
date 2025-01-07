@@ -70,11 +70,48 @@ nav ul li a {
 }
 
 
+#publication_heading{
+    bottom: 0px;
+    margin-bottom: 0px;
+    font-style: normal;
+}
+
+#publication_container{
+    margin-top: 50px;
+    color: rgba(252, 244, 152, 0.507);
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    width: 800px;
+}
+
+#publications_list{
+    margin-top: 7px;
+    list-style-type: none;
+    padding-left: 0;
+    color: rgb(184, 177, 177);
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#publications_list li {
+    counter-increment: list-counter;
+    margin-bottom: 10px;
+}
+
+#publications_list li::before {
+    content: "[" counter(list-counter) "] ";
+    font-weight: bold;
+    margin-right: 1px;
+}
+
 footer {
-    background-color: #1e7c55;
     text-align: center;
     padding: 2px 0;
     position: fixed;
     width:800px;
     bottom: 0;
+    color: rgba(245, 241, 179, 0.603);
 }
