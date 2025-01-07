@@ -5,59 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Page</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <!-- a header element -->
-    <header>
-        <h1 id="header_heading"> Thanks for dropping by! </h1>
-    </header>
+    <div class="warpper-main">
+        <!-- a header element -->
+        <header>
+            <h1 id="header_heading"> Thanks for dropping by! </h1>
+        </header>
 
-    <!-- a nav element -->
-    <nav>
-        <ul>
-            <li><a href="#bio">home</a></li>
-            <li><a href="blogs.html"> blogs</a></li>
-            <li><a href="teaching.html"> academic</a></a></li>
-            <li><a href="contact.html"> contact</a></li>
-            <li><a href="engineering.html"> engineering</a></li>
+        <!-- a nav element -->
+        <nav>
+            <ul>
+                <li><a href="#bio">home</a></li>
+                <li><a href="blogs.html"> blogs</a></li>
+                <li><a href="teaching.html"> academic</a></a></li>
+                <li><a href="engineering.html"> engineering</a></li>
+                <li><a href="contact.html"> contact</a></li>
+            </ul>
+        </nav>
+        <div id="container">
+            <box>
+                <img id="home_image" src="images/header_image.jpg" alt="my picture" width="170" height="180">
+            </box>
 
-        </ul>
-    </nav>
-    <div id="container">
-        <box>
-            <img id="home_image" src="images/header_image.jpg" alt="my picture" width="180" height="180">
-        </box>
+            <p id="bio_p1" > I am an Electrical Engineering PhD graduate; 
+                my education were mostly focused on theoretical analysis of
+                the physical layer in wireless communication systems, and 
+                communication protocols. I have experience in designing ans implementing the
+                communication protocols for wireless sensor networks for 2.4 GHz as well as
+                sub GHz ISM bands. I was a postdoctoral researcher and lecturer at the 
+                University of Kansas and I have research experience
+                in dynamic spectrum access, signal processing, coding theory,
+                and federated machine learning. I have a decent software development
+                experience, particularly in embedded context and real time operating systems (RTOS).
+            </p>
 
-        <p id="bio_p1" > I am an Electrical Engineering PhD graduate; 
-            my education were mostly focused on theoretical analysis of
-            the physical layer in wireless communication systems, and 
-            communication protocols. I have experience in designing 
-            communication protocols via embedded C programing and 
-            real time operating systems (RTOS)s for 2.4 GHz as well as
-            sub GHz ISM bands.
-            I am comfortable with different scripting and computation tools
-            such as Python and Matlab and object oriented coding style.
-            I was a postdoctoral researcher and lecturer at the 
-            University of Kansas and I have research experience
-            in dynamic spectrum access, signal processing, coding theory,
-            and federated machine learning.  </p>
-    </div>
-
-        <p id="bio_p2"> I am from Iran where I received my BSc and MSc in electrical
-            engineering. I came to US to pursue my PhD reseasrch journey 
-            in 2017 and I graduated from University of New Hampshire in 2021. 
-            I am currently a wireless communication engineer at Passivelogic 
-            where we develop wireless sensor network for our AI-driven digital 
-            twin which will transform the efficiency of the future buildings 
-            and cities. </p>    
-        </p>
+            <p id="bio_p2"> I am from Iran where I received my BSc and MSc in electrical
+                engineering. I came to the US to pursue my PhD reseasrch journey 
+                in 2017 and I graduated from University of New Hampshire in 2021. After my PhD graduation,
+                I moved to Kansas to work as a postdoctoral researcher and lecturer at the University of Kansas.
+                I am currently a wireless communication engineer at Passivelogic's sensor group
+                where we are developing our wireless sensor network for our AI-driven digital 
+                twin; our inteligent control solution would transform the efficiency of the future buildings 
+                and cities. </p>    
+            </p>
+        </div>
     
+    <!--the footer element -->
+    <footer>
+        This page is under construction.
+    </footer>
+
+    </div> 
+    <!-- end of wrapper-main -->
 </body>
 
-<!--a footer element -->
-<footer>
-    This page is under construction.
-</footer>
 
 </html>
