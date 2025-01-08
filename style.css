@@ -91,11 +91,59 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
+
+
 #publications_list li::before {
     content: "[" counter(list-counter) "] ";
     font-weight: bold;
     margin-right: 1px;
 }
+
+
+
+#recent_posts_container{
+    margin-top: 50px;
+    padding-left: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#recent_posts_heading{
+    color: rgba(252, 244, 152, 0.507);
+    bottom: 0px;
+    margin-bottom: 0px;
+    font-style: normal;
+}
+
+#recent_posts_list{
+    list-style-type: none;
+    padding-left: 0;
+    color: rgb(184, 177, 177);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#recent_posts_list li {
+    margin-bottom: 5px;
+    color:rgb(184, 177, 177);
+}
+
+/* Specific styles for hyperlinks inside #publications_list li */
+#recent_posts_list li a {
+    color: rgb(184, 177, 177);
+    text-decoration: none; 
+    font-weight: normal; 
+    font-size: 14px; 
+}
+#recent_posts_list li a:hover {
+    color: #72d1b1d3;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
+
 
 footer {
     text-align: center;
