@@ -4,6 +4,7 @@ body {
 }
 
 
+
 .warpper-main{
     width:800px;
     height:100%;
@@ -32,7 +33,11 @@ nav ul li a {
     color: rgba(247, 243, 195, 0.651);
     text-decoration: none;
     font-size: 15px;
-    font-style: bold;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #72d1b1d3;
 }
 
 #bio_p1 {
@@ -56,7 +61,6 @@ nav ul li a {
 #home_image {
     float: right;
     margin: 2px 2px 10px 10px;
-    border: 1px solid white;
 }
 
 
@@ -76,7 +80,7 @@ nav ul li a {
 }
 
 #publications_list{
-    margin-top: 7px;
+    margin-top: 12px;
     list-style-type: none;
     padding-left: 0;
     color: rgb(184, 177, 177);
