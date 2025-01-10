@@ -6,7 +6,7 @@ body {
 
 
 .warpper-main{
-    width:800px;
+    width:750px;
     height:100%;
     padding: 2px 0;
     margin: 0 auto;
@@ -60,7 +60,7 @@ nav ul li a:hover {
 
 #home_image {
     float: right;
-    margin: 2px 2px 10px 10px;
+    margin: 7px 2px 10px 10px;
 }
 
 
@@ -76,7 +76,7 @@ nav ul li a:hover {
     border-radius: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
-    width: 800px;
+    width: 750px;
 }
 
 #publications_list{
@@ -136,7 +136,7 @@ nav ul li a:hover {
 
 /* Specific styles for hyperlinks inside #publications_list li */
 #recent_posts_list li a {
-    color: rgb(184, 177, 177);
+    color: rgba(164, 165, 243, 0.486);
     text-decoration: none; 
     font-weight: normal; 
     font-size: 14px; 
