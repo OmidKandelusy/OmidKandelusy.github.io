@@ -52,25 +52,49 @@ nav ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 400px;
-
+    height: 470px;
 }
 #rkw_picture{
     float: right;
-    margin: 20px 10px 10px 10px;
+    margin: 30px 10px 10px 10px;
 }
-#right_ko_wrong_p{
+#right_ko_wrong_p1{
     font-family: 'baskerville old face';
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(110, 195, 216, 0.61);
+    margin: 10px 10px 5px 5px;
+    text-align: justify; 
+    width: 100%;
+    font-style: italic;
+}
+#right_ko_wrong_p2{
+    font-family: 'baskerville old face';
+    font-size: 16px;
     line-height: 1.5;
     color: rgb(184, 177, 177);
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 12px 12px;
     text-align: justify; 
     width: 100%;
 }
-
-
-
+#right_ko_wrong_p3{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(110, 195, 216, 0.61);
+    margin: 10px 10px 5px 5px;
+    text-align: justify; 
+    width: 100%;
+    font-style: italic;
+}
+#right_ko_wrong_p4{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+}
 
 
 
