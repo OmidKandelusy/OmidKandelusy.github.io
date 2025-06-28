@@ -99,6 +99,65 @@ nav ul li a:hover {
 
 
 
+#xxx_container{
+    margin-top:60px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 470px;
+}
+#xxx_picture{
+    float: right;
+    margin: 30px 10px 10px 10px;
+}
+#xxx_p1{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(110, 195, 216, 0.61);
+    margin: 10px 10px 5px 5px;
+    text-align: justify; 
+    width: 100%;
+    font-style: italic;
+}
+#xxx_p2{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+#xxx_p3{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(110, 195, 216, 0.61);
+    margin: 10px 10px 5px 5px;
+    text-align: justify; 
+    width: 100%;
+    font-style: italic;
+}
+#xxx_p4{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+}
+
+
+
+
+
+
+
+
+
 
 
 
