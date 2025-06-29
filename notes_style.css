@@ -1,0 +1,86 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1f1f1e;
+}
+
+
+.warpper-main{
+    width:750px;
+    height:100%;
+    padding: 2px 0;
+    margin: 0 auto;
+}
+
+nav {
+    margin-bottom: 30px;
+    margin-top: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 35px;
+}
+
+nav ul li a {
+    color: rgba(247, 243, 195, 0.651);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #72d1b1d3;
+}
+
+
+
+#link_index_container{
+    margin-top: 50px;
+    padding-left: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+
+#links_paragraph{
+    list-style-type: none;
+    padding-left: 0;
+    color: rgb(184, 177, 177);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+    font-size: 14px;
+}
+
+#links_paragraph li {
+  list-style-type: none;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#link_index_container li {
+    margin-bottom: 5px;
+    color:rgb(184, 177, 177);
+}
+
+/* Specific styles for hyperlinks inside #publications_list li */
+#link_index_container li a {
+    color: rgba(164, 165, 243, 0.486);
+    text-decoration: none; 
+    font-weight: normal; 
+    font-size: 14px; 
+}
+#link_index_container li a:hover {
+    color: #72d1b1d3;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+}
