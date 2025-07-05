@@ -40,9 +40,43 @@ nav ul li a:hover {
 }
 
 
+#main_container {
+    /* background: linear-gradient(135deg, #2a2a29 0%, #1f1f1e 100%); */
+    /* border: 1px solid #444; */
+    /* border-radius: 10px; */
+    padding-left: 15px;
+    margin: 10px 10px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
+    /* transition: box-shadow 0.3s ease; */
+}
+
+/* #main_container:hover {
+    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
+} */
+
+/* Description box styling */
+/* #description_box {
+    background-color: rgba(247, 243, 195, 0.05);
+    border-left: 4px solid #7278d1a6;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+} */
+
+
+
+#description_box {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10;
+    text-align: justify; 
+    width: 100%;
+}
+
 
 #link_index_container{
-    margin-top: 50px;
+    margin-top: 20px;
     padding-left: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
