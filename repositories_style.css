@@ -36,6 +36,23 @@ nav ul li a:hover {
     color: #72d1b1d3;
 }
 
+
+ul {
+    list-style-type: none;
+    padding: 120;
+}
+
+ul li a {
+    color: rgba(247, 243, 195, 0.651);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+ul li a:hover {
+    color: #72d1b1d3;
+}
+
+
 #top_story{
     font-family: 'baskerville old face';
     margin-top: 60px;
@@ -52,22 +69,19 @@ nav ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 470px;
+    height: 230px;
+    transition: box-shadow 0.3s ease;
 }
+#rkw_container:hover {
+    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
+}
+
+
 #rkw_picture{
     float: right;
-    margin: 30px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 }
-#right_ko_wrong_p1{
-    font-family: 'baskerville old face';
-    font-size: 16px;
-    line-height: 1.5;
-    color: rgba(110, 195, 216, 0.61);
-    margin: 10px 10px 5px 5px;
-    text-align: justify; 
-    width: 100%;
-    font-style: italic;
-}
+
 #right_ko_wrong_p2{
     font-family: 'baskerville old face';
     font-size: 16px;
@@ -77,26 +91,16 @@ nav ul li a:hover {
     text-align: justify; 
     width: 100%;
 }
-#right_ko_wrong_p3{
+
+#link_to_C_rep{
     font-family: 'baskerville old face';
     font-size: 16px;
-    line-height: 1.5;
-    color: rgba(110, 195, 216, 0.61);
-    margin: 10px 10px 5px 5px;
+    line-height: 2.5;
+    color: rgb(184, 177, 177);
+    margin: 30px 12px 12px 12px;
     text-align: justify; 
     width: 100%;
-    font-style: italic;
 }
-#right_ko_wrong_p4{
-    font-family: 'baskerville old face';
-    font-size: 16px;
-    line-height: 1.5;
-    color: rgb(184, 177, 177);
-    margin: 10px 10px 12px 12px;
-    text-align: justify; 
-}
-
-
 
 
 #xxx_container{
@@ -149,7 +153,6 @@ nav ul li a:hover {
     margin: 10px 10px 12px 12px;
     text-align: justify; 
 }
-
 
 
 footer {
