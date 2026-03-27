@@ -111,7 +111,7 @@ ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 230px;
+    height: 210px;
 }
 #python_container:hover {
     box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
