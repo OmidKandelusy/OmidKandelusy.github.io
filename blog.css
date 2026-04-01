@@ -39,6 +39,24 @@ nav ul li a:hover {
     color: #72d1b1d3;
 }
 
+
+
+ul {
+    list-style-type: none;
+    padding: 120;
+}
+
+ul li a {
+    color: rgba(247, 243, 195, 0.651);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+ul li a:hover {
+    color: #72d1b1d3;
+}
+
+
 #first_pragraph {
     font-size: 14px;
     line-height: 1.5;
@@ -48,40 +66,39 @@ nav ul li a:hover {
     width: 100%;
 }
 
-#link_index_container{
-    margin-top: 50px;
-    padding-left: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
-    font-size: 14px;
+
+#books_container{
+    margin-top:20px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 270;
 }
-
-
-#links_paragraph{
-    list-style-type: none;
-    padding-left: 0;
+#books_container:hover {
+    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
+}
+#books_picture{
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+#books_p1{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
     color: rgb(184, 177, 177);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
-    font-size: 14px;
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
 }
-
-
-#link_index_container li {
-    margin-bottom: 5px;
-    color:rgb(184, 177, 177);
-}
-
-/* Specific styles for hyperlinks inside #publications_list li */
-#link_index_container li a {
-    color: rgba(164, 165, 243, 0.486);
-    text-decoration: none; 
-    font-weight: normal; 
-    font-size: 14px; 
-}
-#link_index_container li a:hover {
-    color: #72d1b1d3;
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 14px; 
+#link_to_books_rep{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 2.5;
+    color: rgb(184, 177, 177);
+    margin: 30px 12px 12px 12px;
+    text-align: justify; 
+    width: 100%;
 }
