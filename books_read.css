@@ -52,7 +52,7 @@ nav ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 470px;
+    height: 420px;
 }
 #rkw_picture{
     float: right;
@@ -95,8 +95,6 @@ nav ul li a:hover {
     margin: 10px 10px 12px 12px;
     text-align: justify; 
 }
-
-
 
 
 #xxx_container{
