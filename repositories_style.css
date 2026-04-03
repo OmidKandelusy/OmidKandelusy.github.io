@@ -69,7 +69,7 @@ ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 230px;
+    height: 215px;
     transition: box-shadow 0.3s ease;
 }
 #rkw_container:hover {
@@ -104,14 +104,14 @@ ul li a:hover {
 
 
 #python_container{
-    margin-top:20px;
-    margin-bottom:30px;
+    margin-top:10px;
+    margin-bottom:10px;
     border-radius: 20px;
     border-color: #746675b4;
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 210px;
+    height: 190px;
 }
 #python_container:hover {
     box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
@@ -142,14 +142,14 @@ ul li a:hover {
 
 
 #ti_simplelink_container{
-    margin-top:20px;
+    margin-top:10px;
     margin-bottom:30px;
     border-radius: 20px;
     border-color: #746675b4;
     border-style: dotted;
     border-width: 1px;
     width: 750px;
-    height: 210px;
+    height: 190px;
 }
 #ti_simplelink_container:hover {
     box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
