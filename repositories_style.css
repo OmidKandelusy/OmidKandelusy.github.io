@@ -140,10 +140,48 @@ ul li a:hover {
     width: 100%;
 }
 
+
+#ti_simplelink_container{
+    margin-top:20px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 210px;
+}
+#ti_simplelink_container:hover {
+    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
+}
+
+#ti_simplelink_picture{
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+#ti_simplelink_p1{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+#link_to_ti_simple_link_rep{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 2.5;
+    color: rgb(184, 177, 177);
+    margin: 30px 12px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+
 footer {
     text-align: center;
     padding: 2px 0;
-    position: fixed;
+    position: bottom;
     width:800px;
     bottom: 0;
     color: rgba(245, 241, 179, 0.603);
