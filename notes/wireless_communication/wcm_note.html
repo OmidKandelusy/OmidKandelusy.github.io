@@ -22,6 +22,8 @@
 
             <div id="note_container">
 
+                <h1 id="page_title">How wireless communication works?<h1>
+
                 <p id="note_p1" >  
                     I often find myself in situtations that I am being asked on how a wireless communication system
                     works, and as a PhD holder in this very field (though being focused on the systematic aspects), the
@@ -35,13 +37,11 @@
 
 
                 <figure id="wm_topstory_figure">
-                    <img id="wm_topstory_image" src="notes/wm_note.jpg", alt="radio_station">
+                    <img id="wm_topstory_image" src="notes/wm_note.jpg", alt="radio_station", height="320", width="500">
                     <figcaption id="wm_topstory_caption"> <a href="https://pixabay.com/users/fill-8988" target="_blank">link to image curtesy</a> </figcaption>
                 </figure>
 
                 <div id="note_div_1" >
-
-                    <h3>Why 'electromagnitc waves' for communication?</h1>
 
                     Let's think lound about an experiement with static charges like the balloons and a piece woolen cloth. Let's
                     move a bit deeper and translate that into the rules of electro static physics. As we know, any static charge would 
@@ -55,10 +55,40 @@
                     </ul>
 
                     Such an on-off switiching for information trnasfer direclty translate into an electromagnitc wave because
-                    from the maxwell equations any change in the electric field field would generate magnetic field and vice versa. 
+                    from the Maxwell's equations any change in the electric field field would generate magnetic field and vice versa. 
                     Hence, the wireless communication via electric signals is in essence only possible through the electromagnitc waves.
-                    Similar to virtually anything, first science establishes a fact and now its on poor engineers to deliver something that
-                    runs on the theoreized and abstract concept discovered by the scientists!
+                    However, similar to virtually everyhting, once the science establishes a fact, its on poor engineers to deliver something 
+                    that runs on the theoreized and abstract concept discovered by the scientists! There a quite few challenges that we engineers
+                    should overcome to have a practically meaningful and efficient wireless system. Speaking of efficiency, one of the big challenges
+                    and perhaps the biggest is how to direct an electromagnitc wave from point A such that a far located receiver in point B could
+                    detect it. There are fantastic nuances invloved in this engieering task. First we need to know how electromagnetic waves propgate
+                    in the physical word.
+
+                    <p></p>
+                    
+                    According to Maxwell's law, it is straightforward to show that the direction of propagation in the free-space (no electric charge present)
+                    for an electromagnetic wave must be always perpandicular to both of the electric and magnetic components of the wave. Mathematically speaking,
+                    this can be described as the cross-product of the electric and magnetic components. Thus, we want our alternating electric signal at the touching
+                    point with the air or free space to have a strong poyting vector, i,e large electric and magnetic component. To achieve this goal, we should find
+                    a physical configuration for the touching point which maximizes the alternating signal level. Long story short, we cannot hook up any thing to an
+                    alternating signal for radation, we need a proper thing which we call "Antenna". Well, it was Marconi who used this term to describe the touching
+                    points in his set up, the thing was indeed a vertical pole or "l'antenna" in italian language!
+
+                    <p></p>
+
+                    However, this is only half of the story. The touching point in the receiver side also deremines how efficent we can translate the stricking waves 
+                    into electrical signals. Well, kind of the same math applies! Specifically, the electirc signal that the wave generate on the touching point of the
+                    receiver follows the same equation with the same conclusion that the geometry of the toching point governs the shape and form of the generated signal.
+                    Hence, for an effective communication we need proper antennas at both ends. However, that's not all the story yet. On the receiver side, two additional
+                    things should be considerd as well. First, what mechanism we want to use for generating the electical signal from the striking waves from the transmitter?
+                    Particularly, the electromagnetic wave has two alternating components and both can be used for this goal. However, it is more convenient to use the electic
+                    field comoonent because from the Maxwell's law, voltage is line integral of electic field compenet and a surface integral of the magnetic component. Another
+                    important thing is to make sure that the striking wave's electric component hits the receiver's conductors as much as possible. For example, If the electic
+                    field amplitude is alternating horizontally, the receiver antenna should be placed horizontally, otherwise the generated voltage out of the integrator would 
+                    be next to nothing! This hit and miss situation is techinically explained using the 'polarization' concept. The polarization of an electromagnetic wave is
+                    the contour that the tip of electric field component creates while alternating in time. Hence, we can have vertical, horizontal, circular, eliptical, etc 
+                    polarized electromagetic waves that would entail their own specific antennas to establish an efficient communication.
+                    
                 </div>
 
 
