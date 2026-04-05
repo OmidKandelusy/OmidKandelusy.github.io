@@ -53,17 +53,8 @@ ul li a:hover {
 }
 
 
-#top_story{
-    font-family: 'baskerville old face';
-    margin-top: 60px;
-    color: #dde0dfd3;
-    font-size: 40px;
-    font-weight: normal;
-    text-align: center;
-}
-
-#rkw_container{
-    margin-top:60px;
+#c_container{
+    margin-top:20px;
     border-radius: 20px;
     border-color: #746675b4;
     border-style: dotted;
@@ -72,17 +63,17 @@ ul li a:hover {
     height: 215px;
     transition: box-shadow 0.3s ease;
 }
-#rkw_container:hover {
+#c_container:hover {
     box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
 }
 
 
-#rkw_picture{
+#c_picture{
     float: right;
     margin: 10px 10px 10px 10px;
 }
 
-#right_ko_wrong_p2{
+#c_p1{
     font-family: 'baskerville old face';
     font-size: 16px;
     line-height: 1.5;
