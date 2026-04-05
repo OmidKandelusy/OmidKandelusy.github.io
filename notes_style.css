@@ -40,30 +40,6 @@ nav ul li a:hover {
 }
 
 
-#main_container {
-    /* background: linear-gradient(135deg, #2a2a29 0%, #1f1f1e 100%); */
-    /* border: 1px solid #444; */
-    /* border-radius: 10px; */
-    padding-left: 15px;
-    margin: 10px 10px;
-    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
-    /* transition: box-shadow 0.3s ease; */
-}
-
-/* #main_container:hover {
-    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
-} */
-
-/* Description box styling */
-/* #description_box {
-    background-color: rgba(247, 243, 195, 0.05);
-    border-left: 4px solid #7278d1a6;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-} */
-
-
 
 #description_box {
     font-size: 14px;
@@ -75,49 +51,61 @@ nav ul li a:hover {
 }
 
 
+#wireless_container{
+    margin-top:20px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 270px;
+}
+#wireless_container:hover {
+    box-shadow: 0 6px 20px rgba(209, 181, 114, 0.2);
+}
+#wireless_notes_header{
+    font-family: Arial;
+    font-size: 26px;
+    line-height: 1;
+    color: rgb(184, 177, 177);
+    margin: 10px 1px 1px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+
+#wireless_notes_picture{
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+
+#wireless_p1{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 20px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
 #link_index_container{
     margin-top: 20px;
-    padding-left: 0;
+    padding-left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
     font-size: 14px;
 }
-
-
-#links_paragraph{
-    list-style-type: none;
-    padding-left: 0;
-    color: rgb(184, 177, 177);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: justify;
-    font-size: 14px;
-}
-
-#links_paragraph li {
-  list-style-type: none;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-#link_index_container li {
-    margin-bottom: 5px;
+#wcm_links{
+    font-family: 'baskerville old face';
+    text-decoration: none;
+    font-size: 16px;
     color:rgb(184, 177, 177);
 }
+#wcm_links:hover{
+    color:rgba(232, 174, 140, 0.601);
+}
 
-/* Specific styles for hyperlinks inside #publications_list li */
-#link_index_container li a {
-    color: rgba(164, 165, 243, 0.486);
-    text-decoration: none; 
-    font-weight: normal; 
-    font-size: 14px; 
-}
-#link_index_container li a:hover {
-    color: #72d1b1d3;
-    text-decoration: none; 
-    font-weight: bold; 
-    font-size: 14px; 
-}
+
 
 
 footer {
