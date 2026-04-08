@@ -25,14 +25,14 @@
                 <h1 id="page_title">How wireless communication works?<h1>
 
                 <p id="note_p1" >  
-                    I often find myself in situtations that I am being asked on how a wireless communication system
-                    works, and as a PhD holder in this very field (though being focused on the systematic aspects), the
-                    expectation is that I should be able to explain this in a very simple way. As Einstein famously said,
-                    if one cannot explain something in a simple way, it basically implies a lack of true understanding
-                    on the subject matter. Hence, I decided to make this casual piece of writing to explain this with some
-                    plain words and some rigours from the thick book of electromagnitcs that every ECE student should
-                    pass in the undergrad education. Anyways, how this magical wonder of this universe, conveying some knowlege
-                    from point A to point B without any tangible hardwired and visually discernable connection, works?!
+                    I often find myself in situations that I am being asked on how a wireless communication system works,
+                    and as a PhD holder in this very field (though being focused on the systematic aspects), the expectation
+                    is that I should be able to explain this in a very simple way. As Einstein famously said, if one cannot
+                    explain something in a simple way, it basically implies a lack of true understanding on the subject matter.
+                    Hence, I decided to make this casual piece of writing to explain this with some plain words and some rigorous
+                    expressions from the thick book of electromagnetic, that every ECE student should pass in the undergrad education.
+                    Anyways, how this magical wonder of this universe, conveying some knowledge from point A to point B without any 
+                    tangible and visually distinguishable thread of connection, works?!
                 </p>
 
 
@@ -42,53 +42,51 @@
                 </figure>
 
                 <div id="note_div_1" >
-
-                    Let's think lound about an experiement with static charges like the balloons and a piece woolen cloth. Let's
-                    move a bit deeper and translate that into the rules of electro static physics. As we know, any static charge would 
-                    create an elecritc field around itself which in turn will exert force any other charge in its vecinity. So, 
-                    we can estableish a very rudimentary wireless communication set up where a piece of conductor attached to a
-                    force meter can detect a yes message and a no message as follows:
+                    Let's think loud about an experiment with static charges like the balloons and a piece woolen cloth. Let's move a bit
+                    deeper and translate that into the rules of electro static physics. As we know, any static charge would  create an electric
+                    field around itself which in turn will exert force any other charge in its vicinity. So, we can establish a very rudimentary
+                    wireless communication set up where a piece of conductor attached to a force meter can detect a yes message and a no message as follows:
 
                     <ul>  
-                        <li> force detected, yes, green light &rArr; or in digital word a logic high (1) </li>
-                        <li> no foce detected, no, red light  &rArr; or logic low (0) </li>
+                        <li> force detected: yes   &rArr; or in digital word a logic high (1) </li>
+                        <li> no force detected: no &rArr; or logic low (0) </li>
                     </ul>
 
-                    Such an on-off switiching for information trnasfer direclty translate into an electromagnitc wave because
+                    Such an on-off switching for information transfer directly translate into an electromagnetic wave because
                     from the Maxwell's equations any change in the electric field field would generate magnetic field and vice versa. 
-                    Hence, the wireless communication via electric signals is in essence only possible through the electromagnitc waves.
-                    However, similar to virtually everyhting, once the science establishes a fact, its on poor engineers to deliver something 
-                    that runs on the theoreized and abstract concept discovered by the scientists! There a quite few challenges that we engineers
+                    Hence, the wireless communication via electric signals is in essence only possible through the electromagnetic waves.
+                    However, similar to virtually everything, once the science establishes a fact, its on poor engineers to deliver something 
+                    that runs on the theorized and abstract concept discovered by the scientists! There a quite few challenges that we engineers
                     should overcome to have a practically meaningful and efficient wireless system. Speaking of efficiency, one of the big challenges
-                    and perhaps the biggest is how to direct an electromagnitc wave from point A such that a far located receiver in point B could
-                    detect it. There are fantastic nuances invloved in this engieering task. First we need to know how electromagnetic waves propgate
+                    and perhaps the biggest is how to direct an electromagnetic wave from point A such that a far located receiver in point B could
+                    detect it. There are fantastic nuances involved in this engineering task. First we need to know how electromagnetic waves propagate
                     in the physical word.
 
                     <p></p>
                     
                     According to Maxwell's law, it is straightforward to show that the direction of propagation in the free-space (no electric charge present)
-                    for an electromagnetic wave must be always perpandicular to both of the electric and magnetic components of the wave. Mathematically speaking,
+                    for an electromagnetic wave must be always perpendicular to both of the electric and magnetic components of the wave. Mathematically speaking,
                     this can be described as the cross-product of the electric and magnetic components. Thus, we want our alternating electric signal at the touching
-                    point with the air or free space to have a strong poyting vector, i,e large electric and magnetic component. To achieve this goal, we should find
+                    point with the air or free space to have a strong Poyting vector, i,e large electric and magnetic component. To achieve this goal, we should find
                     a physical configuration for the touching point which maximizes the alternating signal level. Long story short, we cannot hook up any thing to an
-                    alternating signal for radation, we need a proper thing which we call "Antenna". Well, it was Marconi who used this term to describe the touching
-                    points in his set up, the thing was indeed a vertical pole or "l'antenna" in italian language!
+                    alternating signal for radiation, we need a proper thing which we call "Antenna". Well, it was Marconi who used this term to describe the touching
+                    points in his set up, the thing was indeed a vertical pole or "l'antenna" in Italian language!
+
 
                     <p></p>
 
-                    However, this is only half of the story. The touching point in the receiver side also deremines how efficent we can translate the stricking waves 
-                    into electrical signals. Well, kind of the same math applies! Specifically, the electirc signal that the wave generate on the touching point of the
-                    receiver follows the same equation with the same conclusion that the geometry of the toching point governs the shape and form of the generated signal.
+                    However, this is only half of the story. The touching point in the receiver side also determines how efficient we can translate the striking waves 
+                    into electrical signals. Well, kind of the same math applies! Specifically, the electric signal that the wave generate on the touching point of the
+                    receiver follows the same equation with the same conclusion that the geometry of the touching point governs the shape and form of the generated signal.
                     Hence, for an effective communication we need proper antennas at both ends. However, that's not all the story yet. On the receiver side, two additional
-                    things should be considerd as well. First, what mechanism we want to use for generating the electical signal from the striking waves from the transmitter?
-                    Particularly, the electromagnetic wave has two alternating components and both can be used for this goal. However, it is more convenient to use the electic
-                    field comoonent because from the Maxwell's law, voltage is line integral of electic field compenet and a surface integral of the magnetic component. Another
-                    important thing is to make sure that the striking wave's electric component hits the receiver's conductors as much as possible. For example, If the electic
+                    things should be considered as well. First, what mechanism we want to use for generating the electrical signal from the striking waves from the transmitter?
+                    Particularly, the electromagnetic wave has two alternating components and both can be used for this goal. However, it is more convenient to use the electric
+                    field component because from the Maxwell's law, voltage is line integral of electric field component and a surface integral of the magnetic component. Another
+                    important thing is to make sure that the striking wave's electric component hits the receiver's conductors as much as possible. For example, If the electric
                     field amplitude is alternating horizontally, the receiver antenna should be placed horizontally, otherwise the generated voltage out of the integrator would 
-                    be next to nothing! This hit and miss situation is techinically explained using the 'polarization' concept. The polarization of an electromagnetic wave is
-                    the contour that the tip of electric field component creates while alternating in time. Hence, we can have vertical, horizontal, circular, eliptical, etc 
-                    polarized electromagetic waves that would entail their own specific antennas to establish an efficient communication.
-                    
+                    be next to nothing! This hit and miss situation is technically explained using the 'polarization' concept. The polarization of an electromagnetic wave is
+                    the contour that the tip of electric field component creates while alternating in time. Hence, we can have vertical, horizontal, circular, elliptical, etc 
+                    polarized electromagnetic waves that would entail their own specific antennas to establish an efficient communication.
                 </div>
 
 
