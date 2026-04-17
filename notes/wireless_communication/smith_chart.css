@@ -1,0 +1,137 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1f1f1e;
+}
+.warpper-main{
+    width:750px;
+    height:100%;
+    padding: 2px 0;
+    margin: 0 auto;
+}
+nav {
+    margin-bottom: 30px;
+    margin-top: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 35px;
+}
+nav ul li a {
+    color: rgba(247, 243, 195, 0.651);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #72d1b1d3;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 120;
+}
+
+ul li a {
+    color: rgba(247, 243, 195, 0.651);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+ul li a:hover {
+    color: #72d1b1d3;
+}
+
+
+#note_container{
+    margin-top:20px;
+    margin-bottom:30px;
+    width: 750px;
+    height: 270;
+}
+
+#note_picture{
+    float: right;
+    margin: 10px 10px 10px 10px;
+}
+
+#page_title{
+    color:rgb(184, 177, 177);
+    margin-bottom:30px;
+}
+
+#note_p1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight:normal;
+    line-height: 1.4;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+#note_p1::first-letter {
+  font-size: 3em;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  float: left;
+  margin-right: 8px;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+#smc_topstory_figure{
+    margin-top:25px;
+    display:grid;
+    margin-left: 4.5cm;
+}
+#smc_topstory_caption{
+    color:rgba(204, 207, 210, 0.409);
+    font-size: 11px
+}
+#smc_topstory_caption a{
+    color:rgba(204, 207, 210, 0.409);
+    text-decoration: none
+}
+#smc_topstory_caption a:hover{
+    color:rgb(37, 152, 184)
+}
+
+#smc_tline_fig{
+    margin-left:4cm;
+    margin-bottom:-3px;
+}
+#smc_tline_caption{
+    color:rgba(204, 207, 210, 0.409);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#note_div_1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:normal;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+
+#smc_derivation_page{
+    font-size: 16px;
+    font-style: none;
+    text-decoration: none;
+    color:rgb(184, 237, 177);
+}
+
+#vswr_rl_table{
+    margin-left:3cm;
+}

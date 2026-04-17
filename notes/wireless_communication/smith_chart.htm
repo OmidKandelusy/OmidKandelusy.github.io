@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smith Charts!</title>
+    <link rel="stylesheet" href="smith_chart.css">
+    <base href="../../images/">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="warpper-main">
+        <!-- navigation panel-->
+        <nav>
+            <ul>
+                <li><a href="../../index.html">home</a></li>
+            </ul>
+        </nav>
+
+
+        <div id="main_container">
+
+            <div id="note_container">
+
+                <h1 id="page_title">On the beauty of Smith Chart<h1>
+
+                <p id="note_p1" >  
+                    Since the time I did my first recitation for the undergraduate students in the course of electromagnetics in the University of New 
+                    Hampshire, I always wanted to make a piece to pay a tribute to this interesting and elegant effort of my peers for offering a computation
+                    framework which beautifully makes use of graphs and geometry with calculus to solve a typical problem in applied complex numbers. In this 
+                    page I would take the liberty to describe when, how, and why we end up with the smith chart when working with radio frequency (RF) signals.
+                </p>
+
+                <figure id="smc_topstory_figure">
+                    <img id="smc_topstory_image" src="notes/topstory_smchart_picture.jpg", alt="smith chart", height="200", width="400">
+                    <figcaption id="smc_topstory_caption"> <a href="https://unsplash.com/@harrisonbroadbent" target="_blank">image curtosy</a> </figcaption>
+                </figure>
+
+                <div id="note_div_1" >
+
+                    In practice, RF signals are used in a variety of different applications, from information to energy transfer systems. Regardless
+                    of the application, we need to bring the generated RF signals from one point to another like from transmitter amplifier to the 
+                    radiating antenna, or from a satellite receiver dish to the tuner, and so on and so forth. Since the RF signals have alternating
+                    temporal behavior we would need to model the whole connection from the signal source to the end point in terms of impedances.
+                    However, since almost all the RF signals are modulated steady state sinusoid signals, there are standard elements to model such 
+                    an end-to-end model. Let's consider a typical RF circuit with parallel-conductor transmission line (e.g., a PCB trace): 
+
+                    \[
+                    V(z,t) = V_+ e^{-\gamma z} + V_{-} e^{\gamma z}
+                    \]
+                    \[
+                    I(z,t) = I_{+}e^{-\gamma z} - I_{-} e^{\gamma z}
+                    \]
+
+                    <p>
+                        <a id="smc_derivation_page", href="../notes/wireless_communication/smchrt_derivations.html">[click to go the derivation page]</a>
+                    </p>
+
+                 
+
+
+                    Considering that the voltage and current responses are composed of two forward and bakkward going components, we can treat the backwarding signal
+                    as a reflected component and come up with a reflection parameter as
+                    \[
+                    \Gamma = \frac{V_{-}}{V_{+}}e^{2\gamma z}
+                    \]
+
+                    Thus, if we define \(Z_0\) as the interinsic impedence of the transmission line where both forward and backward going components
+                    will experience, replacing the backward component using the reflection parameter, we can write:
+                    \[
+                    \frac{V(z,t)}{I(z,t)} = \frac{V_{+}e^{-\gamma z} + \Gamma V_{+}e^{\gamma z}e^{-2\gamma z}}{V_{+}e^{-\gamma z} - \Gamma V_{+}e^{\gamma z}e^{-2\gamma z}}Z_0 \longrightarrow Z_L= \frac{1+\Gamma}{1-\Gamma}Z_0 \longrightarrow \Gamma = \frac{Z_L-Z_0}{Z_L+Z_0}
+                    \]
+
+
+                    <h2>Smith Chart</h2>
+                    In practice, the transmission lines are very efficient that can be considered lossless which allows for a powerful RF framework for system design. 
+                    For ease of use, an interesting graphic-based tool can be developed in this framework which is known as the Smith Chart! Particularly, due to the 
+                    lossless assumption, \(\gamma = j\beta \), any traverse along the transmission line would result in phase change. This enables us to overcome several
+                    engineering challenges in the design of RF systems. For example, finding the input impedance for the combined load and transmission line or matching the
+                    load impedance like the antenna to the transmission line impedance to maximize the energy transfer to the antenna. But what is the smith chart?
+                    
+                    
+                    The Smith Chart is a series of polar plots that shows the values of reflection parameter for different values of the normalized load. Perhaps, it is 
+                    more tractable to follow this mathematically. From the definition of the reflection parameter above, if we normalize the load impedance by the intrinsic
+                    impedance, we can come up with a series of polar plots as
+
+                    \[
+                    z_l = \frac{Z_L}{Z_0} \longrightarrow x + jy = \frac{1 + \Gamma_r +j\Gamma_i}{1 - \Gamma_r +j\Gamma_i} \longrightarrow x = \frac{1 - \Gamma_r^2 -\Gamma_i^2}{\left(1-\Gamma_r\right)^2 + \Gamma_i^2} \quad y = \frac{2\Gamma_i}{\left(1-\Gamma_r\right)^2 + \Gamma_i^2}
+                    \]
+
+                    As can be seen, for any value of the normalized load, we get a reflection parameter where its real and imaginary parts both are coupled with the real and imaginary
+                    parts of the normalized load in a second order fashion. This implies that we can hove a second order system of equations to solve for the value of \(\Gamma_r\) and \(Gamma_i\)
+                    for any specific value of \(z_L\). Particularly, after some manipulations, the following system of equations can be obtained
+                    
+                    \begin{align}
+                    \left(\Gamma_r - \frac{x}{1+x}\right)^2 + \Gamma_i^2 = \left(\frac{1}{\Gamma_r + 1}\right)^2 \quad \quad 
+                    \left(\Gamma_r - 1\right)^2 + \left(\Gamma_i - \frac{1}{y}\right) = \left(\frac{1}{y}\right)^2
+                    \end{align}
+                    
+                    Therefore, if we create a coordinate with \(\Gamma_r\) as the vertical axis and the \(\Gamma_i\) as the horizontal, we can plot each equation for a collection 
+                    of different arbitrary values of \(x\) and \(y\). If we keep adding these curves, we can populate the reflection coordinate space as illustrated in the figure below:
+
+                    <figure id="smc_topstory_figure">
+                        <img id="smc_topstory_image" src="notes/smith_chart_graph.png", alt="smith chart", height="400", width="400">
+                        <figcaption id="smc_topstory_caption"> <a href="https://commons.wikimedia.org/wiki/File:Smith_chart_gen.svg" target="_blank">image by wikipedia</a> </figcaption>
+                    </figure>
+
+                    Furthermore, as I said earlier, traversing the transmission line would result in phase shift of the voltage. This feature is also included in the chart on the circumference
+                    in a very interesting way! Particularly, using the definition of the reflection parameter above, we can characterize the angular rotation around the center of the reflection 
+                    coordinate as:
+                    \[
+                    \Psi = \tan^{-1}(\frac{\mathcal{Im}\{\Gamma e^{-j\beta z} \}}{\mathcal{Re}\{\Gamma e^{-2j\beta z}\}})
+                    \]
+
+                    So, as we move from the load to the source which is called `wavelength towards generator`, we travel around the smith chart in the clock wise order since we are adding 
+                    a negative phase of \(2\beta l\) depending on the distance \(l\). So, we complete one circumnavigation when the \(\beta l = \pi \). On the Smith Chart's circumference there are two phase
+                    scales which show increment of phase for `wtg` and `wtl` travel where the length of the travel is normalized by the wavelength.
+
+                    <h2>Application example</h2>
+                    One of the most common application of the Smith Chart is impedance matching in RF circuits to maximize energy transfer from the radio source to the antenna. Suppose we
+                    have a transmission line with intrinsic impedance of \(Z_0= 50\Omega\) that is terminated with an antenna whose impedance is \(Z_L=35 + j40 \Omega \). Pinpointing the 
+                    normalized load impedance on the Smith Chart, we can draw a line from the center of the chart to the point where the line length will be equal to \(|\Gamma|\). Next we 
+                    draw a circle from the center and for a radius equal to \(|\Gamma|\). This circle will show our phase as we traverse along the transmission line. Here, to get a perfect 
+                    match, we want to see at what location on the transmission line, we can have a normalized impedance with the real part equal to 1. At that point, would then add a canceling
+                    impedance to make the normalized load impedance equal to 1 which results in \(\Gamma = 0\) or a perfect matching.
+
+                    <p></p>
+
+                    It is worth mentioning that, there is a quantity called voltage standing wave ratio (VSWR) which essentially describes how well the transmission line is matched with the
+                    load impedance in that, it is basically shows how much power is dissipated due to backward going component. This quantity is defined as
+                    \[
+                    \text{VSWR} = \frac{1 + |\Gamma|}{1 - |\Gamma|}
+                    \]
+
+                    Furthermore, there is another similar quantity called `returned loss` which characterize the wasted power in reflection:
+                    \[
+                    \text{RL} = -20 \log_{10}\left(|\Gamma|\right) \ \ \text{dB}
+                    \]
+
+                    In general, when dealing with the RF parts and circuits, we can consider this table as the rule of thumb to understand the information that such parts usually provide
+                    in their data sheet.
+
+                    <p></p>
+
+                <table id="vswr_rl_table" border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                    <th>Match Quality</th>
+                    <th>VSWR</th>
+                    <th>Return Loss (dB)</th>
+                    <th>Interpretation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Perfect</td>
+                    <td>1.0</td>
+                    <td>∞</td>
+                    <td>No reflection (ideal match)</td>
+                    </tr>
+                    <tr>
+                    <td>Excellent</td>
+                    <td>1.2</td>
+                    <td>~20 dB</td>
+                    <td>Very small reflection</td>
+                    </tr>
+                    <tr>
+                    <td>Good</td>
+                    <td>1.5</td>
+                    <td>~14 dB</td>
+                    <td>Common RF design target</td>
+                    </tr>
+                    <tr>
+                    <td>OK</td>
+                    <td>2.0</td>
+                    <td>~9.5 dB</td>
+                    <td>Noticeable mismatch</td>
+                    </tr>
+                    <tr>
+                    <td>Poor</td>
+                    <td>3.0</td>
+                    <td>~6 dB</td>
+                    <td>Strong reflections</td>
+                    </tr>
+                </tbody>
+                </table>
+                
+            </div>
+
+        </div>
+
+    </div> 
+</body>
+
+

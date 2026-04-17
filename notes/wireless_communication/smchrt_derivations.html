@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smith Charts!</title>
+    <link rel="stylesheet" href="smith_chart.css">
+    <base href="../../images/">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <div class="warpper-main">
+        <!-- navigation panel-->
+        <nav>
+            <ul>
+                <li><a href="../../index.html">home</a></li>
+            </ul>
+        </nav>
+
+
+        <div id="main_container">
+
+            <div id="note_container">
+
+                <h1 id="page_title">Transmission line and Smith Chart<h1>
+
+                <p id="note_p1" >  
+                    In this page, I basically derive and keep the equations that are needed to understand how transmission lines can be modeled
+                    mathematically, which is directly related to the Smith Chart framework. This is a work in progress and I will keep updating
+                    this page occasionally on my leisure time.
+                </p>
+
+                <div id="note_div_1" >
+
+                    Starting from our RF circuit:
+
+                    <figure>
+                        <img id="smc_tline_fig" src="notes/smith_chart_tl.png", alt="transmission line model", height="140", width="400">
+                        <figcaption id="smc_tline_caption">RF circuit model and wave model for a simple source to load RF circuit</figcaption>
+                    </figure>
+
+                    In this model, the lump elements are in per-unit system normalized to the length unit. Thus, for half of the length there is 
+                    division by two. Initially, we only focus on the transmission line response to an input and we assume there is no load connected
+                    to the output terminal of the transmission line. As highlighted on the circuit, with some simple KCL and KVL gymnastics, we can
+                    obtain:
+                    \[ \frac{\partial V}{\partial z} = - \left(RI + L \frac{\partial I}{\partial t}\right)\]
+                    \[ \frac{\partial I}{\partial z} = - \left(GV + C \frac{\partial V}{\partial t}\right)\]
+                    
+                    yeilding
+
+                    \begin{align}
+                        \frac{\partial^2 V}{\partial z^2} = LC \frac{\partial^2 V}{\partial t^2} +(LG + RC)\frac{\partial V}{\partial t} + RGV.
+                    \end{align}     
+                    
+                    This differential equation is entry point to the amazing world of the smith charts! As you may recall from the undergrad courses
+                    like circuits or control systems, any system with a governing differential equation will have two different responses. A natural 
+                    response which is caused by the initial states and boundary conditions and a forced response which is caused by the input to the
+                    system. In the following, we talk about the two responses sequentially.
+
+                    <h2> Natural Response (Transient)</h2>
+
+                    Using the simple yet powerful method of separation, \(V(z,t)=P(z)Q(t)\), we can write
+
+                    \begin{align}
+                    \frac{P^{''}(z) }{P(z)} = \frac{LC Q^{''}(t)}{Q(t)} + \frac{(LG + RC)Q^{'}(t)}{Q(t)} + RG
+                    \end{align}
+
+                    Here, since the left hand side and right hand side are both only a function \(z\) and \(t\) respectively, the only
+                    situation in which this equation holds is when both are equal to a constant, let's call this constant \(K\). Thus, we
+                    can break the PDE into a pair of simple ODEs as 
+                    \begin{align}
+                    &\frac{P^{''}(z) }{P(z)} = K \\
+                    &\frac{LC Q^{''}(t)}{Q(t)} + \frac{(LG + RC)Q^{'}(t)}{Q(t)} + RG = K
+                    \end{align}
+
+                    Hence, the general natural response is given by
+
+                    \begin{align}
+                    v(z,t) = \left(Ae^{-j\beta z} + B e^{j\beta z} \right) \left(Ie^{s_1t} + Je^{s_2t}\right)
+                    \end{align}
+
+                    where \(\beta=\sqrt{K}\) and \(s_1\) and \(s_2\) are solution of the characteristic equations for temporal differential equation.
+                    Using the initial as well as the boundary conditions, we can find the transient response. However, in the context of RF engineering
+                    and wireless communications engineering, we are not very particularly invested in the transient profile of the response. Rather, we
+                    are highly interested to carefully characterize the steady state and force response of the transmission line to an input. 
+
+                    <h2> Forced Response </h2>
+
+                    In this case, the same differential equations still describe the system, however, we can proactively, describe the general form of 
+                    the voltage or current response. In other words, we can say
+                    \[
+                    Q(t) = A e^{j\omega t + \theta} \rightarrow Ae^{j\omega t + \theta}\left[ -LC\omega^2 + RG - K + j\omega\left(LG+RC\right)\right] = 0
+                    \]
+                    \[
+                    \longrightarrow K=RG-LC\omega^2 + j\omega \left(LG+RC\right)
+                    \]
+                    \[
+                    \longrightarrow P(z) = I e^{-\sqrt{K}z} + J e^{-\sqrt{K}z}
+                    \]
+
+                    Ultimately, we can say the voltage along the transmission line in the steady state responses to the input sinusiod as
+                    \[
+                    V(z,t) = V_1 e^{j\omega t - \sqrt{K}z} + V_2 e^{j\omega t + \sqrt{K}z}
+                    \]
+                    \[
+                    \longrightarrow V(z,t) = V_+ e^{-\sqrt{K}z} + V_{-} e^{\sqrt{K}z}
+                    \]
+                    
+                    <h2> Reflection Parameter</h2>
+                    Considering that the forced response is composed of two forward and backward going components, we can treat the backwarding signal
+                    as a reflected component and come up with a reflection parameter as
+                    \[
+                    \Gamma = \frac{V_{-}}{V_{+}}e^{2\sqrt{K}z}
+                    \]
+
+                    <h2> Relation of the Load and interinsic Impedances </h2>
+
+                    Here, if we calculate the coupled current formula for the transmission line in the sinusoid stead state, we get
+                    \[
+                    I(z,t) = \frac{-1}{R+j\omega L} \frac{dV}{dz} \rightarrow I(z,t) = I_{+}e^{-\sqrt{K}z} - I_{-}e^{\sqrt{K}z}
+                    \]
+
+                    Thus, if we define \(Z_0\) as the intrinsic impedance of the transmission line where both forward and backward going components
+                    will experience, we can say
+                    \[
+                    V(z,t) = V_+ e^{-\sqrt{K}z} + V_{-} e^{\sqrt{K}z}
+                    \]
+                    \[
+                    I(z,t) = \frac{V_{+}}{Z_0}e^{-\sqrt{K}z} - \frac{V_{-}}{Z_0}e^{\sqrt{K}z}
+                    \]
+
+                    Here, replacing the backward component using the reflection parameter, we can write:
+                    \[
+                    \frac{V(z,t)}{I(z,t)} = \frac{V_{+}e^{-\sqrt{K}z} + \Gamma V_{+}e^{\sqrt{K}z}e^{-2\sqrt{K}z}}{V_{+}e^{-\sqrt{K}z} - \Gamma V_{+}e^{\sqrt{K}z}e^{-2\sqrt{K}z}}Z_0 \longrightarrow Z_L= \frac{1+\Gamma}{1-\Gamma}Z_0 
+                    \]
+                    yeilding 
+                    \[
+                    \boxed{\Gamma = \frac{Z_L - Z_0}{Z_L + Z_0}}
+                    \]
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div> 
+</body>
+
+
