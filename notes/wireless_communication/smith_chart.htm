@@ -44,7 +44,8 @@
                     radiating antenna, or from a satellite receiver dish to the tuner, and so on and so forth. Since the RF signals have alternating
                     temporal behavior we would need to model the whole connection from the signal source to the end point in terms of impedances.
                     However, since almost all the RF signals are modulated steady state sinusoid signals, there are standard elements to model such 
-                    an end-to-end model. Let's consider a typical RF circuit with parallel-conductor transmission line (e.g., a PCB trace): 
+                    an end-to-end model. It is straighfoward to show that for a typical RF circuit with atransmission line (e.g., a PCB trace), there 
+                    will be two components on the transmission line given by:
 
                     \[
                     V(z,t) = V_+ e^{-\gamma z} + V_{-} e^{\gamma z}
@@ -52,16 +53,9 @@
                     \[
                     I(z,t) = I_{+}e^{-\gamma z} - I_{-} e^{\gamma z}
                     \]
-
-                    <p>
-                        <a id="smc_derivation_page", href="../notes/wireless_communication/smchrt_derivations.html">[click to go the derivation page]</a>
-                    </p>
-
-                 
-
-
-                    Considering that the voltage and current responses are composed of two forward and bakkward going components, we can treat the backwarding signal
-                    as a reflected component and come up with a reflection parameter as
+                    where the \(+\) and \(-\) sings distinguishes such forward and backward traveling components. I have created a dedicated page where 
+                    I go over the mathematics and modeling of the tranmssion lines <a id="smc_derivation_page", href="../notes/wireless_communication/smchrt_derivations.html">[here]</a>. The above two equations are derived there and provide more explanations
+                    and details on how we end up with these two characterizing equations. Here, we can treat the backwarding signal as a reflected component and come up with a reflection parameter as
                     \[
                     \Gamma = \frac{V_{-}}{V_{+}}e^{2\gamma z}
                     \]
