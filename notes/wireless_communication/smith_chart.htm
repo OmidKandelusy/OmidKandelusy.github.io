@@ -34,7 +34,7 @@
 
                 <figure id="smc_topstory_figure">
                     <img id="smc_topstory_image" src="notes/topstory_smchart_picture.jpg", alt="smith chart", height="200", width="400">
-                    <figcaption id="smc_topstory_caption"> <a href="https://unsplash.com/@harrisonbroadbent" target="_blank">image curtosy</a> </figcaption>
+                    <figcaption id="smc_topstory_caption"> <a href="https://en.wikipedia.org/wiki/Waveguide_flange#/media/File:Waveguide-flange-UBR320.jpg" target="_blank">image curtosy of Wikipedia</a> </figcaption>
                 </figure>
 
                 <div id="note_div_1" >
@@ -111,13 +111,19 @@
                     a negative phase of \(2\beta l\) depending on the distance \(l\). So, we complete one circumnavigation when the \(\beta l = \pi \). On the Smith Chart's circumference there are two phase
                     scales which show increment of phase for `wtg` and `wtl` travel where the length of the travel is normalized by the wavelength.
 
-                    <h2>Application example</h2>
+                    <h2>Application examples</h2>
                     One of the most common application of the Smith Chart is impedance matching in RF circuits to maximize energy transfer from the radio source to the antenna. Suppose we
                     have a transmission line with intrinsic impedance of \(Z_0= 50\Omega\) that is terminated with an antenna whose impedance is \(Z_L=35 + j40 \Omega \). Pinpointing the 
                     normalized load impedance on the Smith Chart, we can draw a line from the center of the chart to the point where the line length will be equal to \(|\Gamma|\). Next we 
                     draw a circle from the center and for a radius equal to \(|\Gamma|\). This circle will show our phase as we traverse along the transmission line. Here, to get a perfect 
                     match, we want to see at what location on the transmission line, we can have a normalized impedance with the real part equal to 1. At that point, would then add a canceling
                     impedance to make the normalized load impedance equal to 1 which results in \(\Gamma = 0\) or a perfect matching.
+
+                    <p></p>
+
+                    There is also another case for using Smith Chart in impedance matching context. In this case, the matching occurs at the load such that we add a passive circuit to compensate
+                    for the unbalanced normalized load. Particularly, in this approach, we no longer traverse the transmission line, but we move directly from the \(z_L\) to the center of the chart
+                    by adding a passive \(\pi\) or L-section circuit before the load where the lump elements of the compensatory circuit is chosen to move the normalized load to the center.
 
                     <p></p>
 
