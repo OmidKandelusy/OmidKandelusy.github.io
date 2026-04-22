@@ -52,37 +52,42 @@
                         <li> no force detected: no &rArr; or logic low (0) </li>
                     </ul>
 
-                    Such an on-off switching for information transfer directly translate into an electromagnetic wave because
-                    from the Maxwell's equations any change in the electric field field would generate magnetic field and vice versa. 
-                    Hence, the wireless communication via electric signals is in essence only possible through the electromagnetic waves.
-                    However, similar to virtually everything, once the science establishes a fact, its on poor engineers to deliver something 
-                    that runs on the theorized and abstract concept discovered by the scientists! There a quite few challenges that we engineers
-                    should overcome to have a practically meaningful and efficient wireless system. Speaking of efficiency, one of the big challenges
-                    and perhaps the biggest is how to direct an electromagnetic wave from point A such that a far located receiver in point B could
-                    detect it. There are fantastic nuances involved in this engineering task. First we need to know how electromagnetic waves propagate
+                    Such an on-off switching for information transfer, directly translates into an electromagnetic wave because
+                    the Maxwell's equations prove that any change in the electric field generates magnetic field and vice versa. 
+                    Hence, the wireless communication though electric signals is in essence only possible through the electromagnetic waves.
+                    To better envision this, a viable wireless information transfer would entail very fast on-off switching which evidently
+                    result in a grand a coexistence show of electric and magnetic components. However, similar to virtually everything, once the science establishes a fact, its on poor engineers to deliver something 
+                    that runs on the theorized and abstract concept discovered by the scientists! There are a quite few challenges that we engineers
+                    should overcome before we can have a practically meaningful and efficient wireless system. One of the big challenges
+                    and perhaps the biggest is how to direct an electromagnetic wave from the point A in such a way that a far located receiver at the point B could
+                    detect it. There are fantastic nuances involved in this engineering task. To appraoch it, we first need to know how electromagnetic waves propagate
                     in the physical word.
 
                     <p></p>
                     
-                    According to Maxwell's law, it is straightforward to show that the direction of propagation in the free-space (no electric charge present)
-                    for an electromagnetic wave must be always perpendicular to both of the electric and magnetic components of the wave. Mathematically speaking,
-                    this can be described as the cross-product of the electric and magnetic components. Thus, we want our alternating electric signal at the touching
-                    point with the air or free space to have a strong Poyting vector, i,e large electric and magnetic component. To achieve this goal, we should find
+                    According to Maxwell's law, the direction of propagation for an electromagnetic wave in the free-space (no electric charge present)must be always 
+                    perpendicular to both of the electric and magnetic components of the wave. Mathematically speaking,this can be described as the cross-product of 
+                    the electric and magnetic components, which is called the Poynting vector. Thus, we want our alternating electric signal at the touching
+                    point with the air or free space to have a strong Poyting vector, i,e large electric and magnetic components. To achieve this goal, we should find
                     a physical configuration for the touching point which maximizes the alternating signal level. Long story short, we cannot hook up any thing to an
-                    alternating signal for radiation, we need a proper thing which we call "Antenna". Well, it was Marconi who used this term to describe the touching
-                    points in his set up, the thing was indeed a vertical pole or "l'antenna" in Italian language!
-
+                    alternating signal for the radiation; instead, we need a proper geometry of conductors which we call "Antenna". Well, it was Marconi who used this 
+                    term to describe the touching points in his set up, the thing was indeed a vertical pole or "l'antenna" in Italian language!
 
                     <p></p>
 
                     However, this is only half of the story. The touching point in the receiver side also determines how efficient we can translate the striking waves 
                     into electrical signals. Well, kind of the same math applies! Specifically, the electric signal that the wave generate on the touching point of the
-                    receiver follows the same equation with the same conclusion that the geometry of the touching point governs the shape and form of the generated signal.
-                    Hence, for an effective communication we need proper antennas at both ends. However, that's not all the story yet. On the receiver side, two additional
-                    things should be considered as well. First, what mechanism we want to use for generating the electrical signal from the striking waves from the transmitter?
-                    Particularly, the electromagnetic wave has two alternating components and both can be used for this goal. However, it is more convenient to use the electric
-                    field component because from the Maxwell's law, voltage is line integral of electric field component and a surface integral of the magnetic component. Another
-                    important thing is to make sure that the striking wave's electric component hits the receiver's conductors as much as possible. For example, If the electric
+                    receiver follows the same equation with the same conclusion: the geometry of the touching point governs the shape and form of the generated signal.
+                    Hence, for an effective communication we need proper antennas at both ends. However, that's still not all the whole story yet. On the receiver side, two additional
+                    things should be considered as well. First, what mechanism we want to use for generating the electrical signal from the striking waves ?
+                    Particularly, the electromagnetic wave has two components and both can be used for this goal. However, it is more convenient to use the electric
+                    field component because from the Maxwell's law, voltage is line integral of electric field component and a surface integral of the magnetic component.
+                    In other words, we only need a a metal rode to generate electircal signals out of the electric component of the electromagnetic waves whereas relying on
+                    the magnetic field would need a loop. As can be guessed, the former is clearly more convinient.
+                    
+                    <p></p>
+
+                    The second important thing is to make sure that the striking wave's electric component hits the receiver's conductors as much as possible. For example, If the electric
                     field amplitude is alternating horizontally, the receiver antenna should be placed horizontally, otherwise the generated voltage out of the integrator would 
                     be next to nothing! This hit and miss situation is technically explained using the 'polarization' concept. The polarization of an electromagnetic wave is
                     the contour that the tip of electric field component creates while alternating in time. Hence, we can have vertical, horizontal, circular, elliptical, etc 
