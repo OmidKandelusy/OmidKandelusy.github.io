@@ -115,3 +115,21 @@ ul li a:hover {
     text-align: justify; 
     width: 100%;
 }
+
+
+#wm_marconi_setup_figure{
+    margin-top:15px;
+    display:grid;
+    margin-left:3.5cm;
+}
+#wm_marconi_setup_caption{
+    color:rgba(204, 207, 210, 0.409);
+    font-size: 11px
+}
+#wm_marconi_setup_caption a{
+    color:rgba(204, 207, 210, 0.409);
+    text-decoration: none
+}
+#wm_marconi_setup_caption a:hover{
+    color:rgb(37, 152, 184)
+}
