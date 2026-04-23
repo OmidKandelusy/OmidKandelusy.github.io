@@ -29,7 +29,7 @@
                     Since the time I did my first recitation for the undergraduate students in the course of electromagnetics in the University of New 
                     Hampshire, I always wanted to make a piece to pay a tribute to this interesting and elegant effort of my peers for offering a computation
                     framework which beautifully makes use of graphs and geometry with calculus to solve a typical problem in applied complex numbers. In this 
-                    page I would take the liberty to describe when, how, and why we end up with the smith chart when working with radio frequency (RF) signals.
+                    page I would take the liberty to describe when, how, and why we end up with the Smith Chart when working with radio frequency (RF) signals.
                 </p>
 
                 <figure id="smc_topstory_figure">
@@ -42,10 +42,10 @@
                     In practice, RF signals are used in a variety of different applications, from information to energy transfer systems. Regardless
                     of the application, we need to bring the generated RF signals from one point to another like from transmitter amplifier to the 
                     radiating antenna, or from a satellite receiver dish to the tuner, and so on and so forth. Since the RF signals have alternating
-                    temporal behavior we would need to model the whole connection from the signal source to the end point in terms of impedances.
+                    temporal behavior, we would need to model the whole connection from the signal source to the end point in terms of impedances.
                     However, since almost all the RF signals are modulated steady state sinusoid signals, there are standard elements to model such 
-                    an end-to-end model. It is straighfoward to show that for a typical RF circuit with atransmission line (e.g., a PCB trace), there 
-                    will be two components on the transmission line given by:
+                    an end-to-end model. It is straighfoward to show that for a typical RF circuit with a transmission line (e.g., a PCB trace), there 
+                    can be, in general, two traversing components on the transmission line in the opposite direction as
 
                     \[
                     V(z,t) = V_+ e^{-\gamma z} + V_{-} e^{\gamma z}
@@ -53,7 +53,7 @@
                     \[
                     I(z,t) = I_{+}e^{-\gamma z} - I_{-} e^{\gamma z}
                     \]
-                    where the \(+\) and \(-\) sings distinguishes such forward and backward traveling components. I have created a dedicated page where 
+                    where the \(+\) and \(-\) sings distinguish such forward and backward traveling components. I have created a dedicated page where 
                     I go over the mathematics and modeling of the tranmssion lines <a id="smc_derivation_page", href="../notes/wireless_communication/smchrt_derivations.html">[here]</a>. The above two equations are derived there and provide more explanations
                     and details on how we end up with these two characterizing equations. Here, we can treat the backwarding signal as a reflected component and come up with a reflection parameter as
                     \[
@@ -72,12 +72,12 @@
                     For ease of use, an interesting graphic-based tool can be developed in this framework which is known as the Smith Chart! Particularly, due to the 
                     lossless assumption, \(\gamma = j\beta \), any traverse along the transmission line would result in phase change. This enables us to overcome several
                     engineering challenges in the design of RF systems. For example, finding the input impedance for the combined load and transmission line or matching the
-                    load impedance like the antenna to the transmission line impedance to maximize the energy transfer to the antenna. But what is the smith chart?
+                    load impedance like the antenna to the transmission line impedance to maximize the energy transfer to the antenna. But what is the Smith Chart?
                     
                     
                     The Smith Chart is a series of polar plots that shows the values of reflection parameter for different values of the normalized load. Perhaps, it is 
                     more tractable to follow this mathematically. From the definition of the reflection parameter above, if we normalize the load impedance by the intrinsic
-                    impedance, we can come up with a series of polar plots as
+                    (characteristic) impedance of the transmission line, we can come up with a series of polar plots as
 
                     \[
                     z_l = \frac{Z_L}{Z_0} \longrightarrow x + jy = \frac{1 + \Gamma_r +j\Gamma_i}{1 - \Gamma_r +j\Gamma_i} \longrightarrow x = \frac{1 - \Gamma_r^2 -\Gamma_i^2}{\left(1-\Gamma_r\right)^2 + \Gamma_i^2} \quad y = \frac{2\Gamma_i}{\left(1-\Gamma_r\right)^2 + \Gamma_i^2}
