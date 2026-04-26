@@ -148,7 +148,7 @@ ul li a:hover {
 
 #ti_simplelink_picture{
     float: right;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 1px;
 }
 #ti_simplelink_p1{
     font-family: 'baskerville old face';
@@ -207,7 +207,6 @@ ul li a:hover {
 }
 
 
-
 #zephyr_by_nrf_container{
     margin-top:10px;
     margin-bottom:10px;
@@ -223,7 +222,7 @@ ul li a:hover {
 }
 #zephyr_by_nrf_picture{
     float: right;
-    margin: 50px 40px 10px 30px;
+    margin: 50px 40px 10px 20px;
 }
 #zephyr_by_nrf_p1{
     font-family: 'baskerville old face';
@@ -243,9 +242,6 @@ ul li a:hover {
     text-align: justify; 
     width: 100%;
 }
-
-
-
 
 
 
