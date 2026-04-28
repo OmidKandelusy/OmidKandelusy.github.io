@@ -140,6 +140,7 @@ ul li a:hover {
     border-style: dotted;
     border-width: 1px;
     width: 750px;
+
     height: 190px;
 }
 #ti_simplelink_container:hover {
@@ -206,7 +207,6 @@ ul li a:hover {
     width: 100%;
 }
 
-
 #zephyr_by_nrf_container{
     margin-top:10px;
     margin-bottom:10px;
@@ -243,6 +243,41 @@ ul li a:hover {
     width: 100%;
 }
 
+#embedded_linux_container{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 240;
+}
+#embedded_linux_container:hover {
+    box-shadow: 0 6px 20px rgba(114, 209, 177, 0.2);
+}
+#embedded_linux_picture{
+    float: right;
+    margin: 50px 35px 10px 18px;
+}
+#embedded_linux_p1{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+#link_to_embedded_linux_rep{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 2.5;
+    color: rgb(184, 177, 177);
+    margin: 30px 12px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
 
 
 footer {
