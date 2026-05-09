@@ -6,6 +6,7 @@
     <title>DSP & FFT!</title>
     <link rel="stylesheet" href="dsp_and_fft.css">
     <base href="../../images/">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -43,7 +44,26 @@
                 </figure>
 
                 <div id="note_div_1" >
-                    
+                    The digital signal processing of the real time analogue signals pivots around the sampling and quantization of the original time-continuous
+                    signal. A typical ideal analogue to digital convertor with a sampling frequency of \(F_s\) (Hz) or sampling period of \(T_s\) (Seconds) is usually 
+                    mathematically expressed via the convolution of impulse train with an analogue signal \(g(t)\) as
+                    \[ \tilde{g}[n] := \hat{g}(nT_s) =  g(t) * \sum_{k=-\infty}^{\infty} \delta\left(t-kT_s\right)  \quad \text{where } n=-\infty:\infty\]
+
+                    Arranging the definitions for the continuous and discrete Fourier transform, it is straightfoward to show that the discrete Fourier transform of 
+                    \(\tilde{g}[n]\) can obtained from the continuous transform as
+                    \[ \tilde{G}(e^{j\omega}) = G\left(j\Omega\right) \Bigg|_{\Omega = \frac{\omega}{T_s}} \longrightarrow \quad \tilde{G}(e^{j\omega}) = \frac{1}{T_s} \sum_{k=-\infty}^{\infty} G\left( j\left( \frac{\omega}{T_s} - \frac{2k\pi}{T_s} \right) \right) \]
+
+                    where \(\omega\) is the angular frequency for the discrete transform domain. There are several important nuances that can be inferred from this 
+                    equation relating the continuous frequency domain \(f\) in Hz to the angular and periodic frequency domain \(\omega\) in radian that can be discussed
+                    easily through the simple example below.
+
+
+                <figure id="dft_example_figure">
+                    <img id="dft_example_image" src="notes/dsp_fft_spectrum_example.png", alt="power_spectrum", height="300", width="320">
+                    <figcaption id="dft_example_caption"> discrete and continuous frequency domain of the transformed signals</figcaption>
+                </figure>
+
+
                 </div>
 
             </div>
