@@ -53,13 +53,13 @@ nav ul li a:hover {
 
 #wireless_container{
     margin-top:20px;
-    margin-bottom:30px;
+    margin-bottom:15px;
     border-radius: 20px;
     border-color: #746675b4;
-    border-style: dotted;
+    border-style: none;
     border-width: 1px;
     width: 750px;
-    height: 270px;
+    height: 170px;
 }
 #wireless_container:hover {
     box-shadow: 0 6px 20px rgba(209, 181, 114, 0.2);
@@ -69,14 +69,14 @@ nav ul li a:hover {
     font-size: 26px;
     line-height: 1;
     color: rgb(184, 177, 177);
-    margin: 10px 1px 1px 12px;
+    margin: 10px 1px 30px 12px;
     text-align: justify; 
     width: 100%;
 }
 
 #wireless_notes_picture{
     float: right;
-    margin: 10px 10px 10px 10px;
+    margin: -45px 10px 10px 10px;
 }
 
 #wireless_p1{
@@ -89,7 +89,7 @@ nav ul li a:hover {
     width: 100%;
 }
 #link_index_container{
-    margin-top: 20px;
+    margin-top: 15px;
     padding-left: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: justify;
@@ -107,6 +107,44 @@ nav ul li a:hover {
 
 
 
+#signal_processing_container{
+    margin-top:10px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: none;
+    border-width: 1px;
+    width: 750px;
+    height: 170px;
+}
+#signal_processing_container:hover {
+    box-shadow: 0 6px 20px rgba(209, 181, 114, 0.2);
+}
+#signal_processing_notes_header{
+    font-family: Arial;
+    font-size: 26px;
+    line-height: 1;
+    color: rgb(184, 177, 177);
+    margin: 10px 1px 30px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+
+#signal_processing_notes_picture{
+    float: right;
+    margin: -35px 10px 10px 10px;
+}
+
+#signal_processing_links{
+    font-family: 'baskerville old face';
+    text-decoration: none;
+    font-size: 16px;
+    color:rgb(184, 177, 177);
+}
+#signal_processing_links:hover{
+    color:rgba(232, 174, 140, 0.601);
+}
+
 
 footer {
     text-align: center;
@@ -114,5 +152,5 @@ footer {
     position: fixed;
     width:800px;
     bottom: 0;
-    color: rgba(245, 241, 179, 0.603);
+    color: rgba(245, 241, 179, 0.303);
 }
