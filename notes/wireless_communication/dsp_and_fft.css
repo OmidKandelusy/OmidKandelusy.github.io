@@ -120,7 +120,7 @@ ul li a:hover {
 #dft_example_figure{
     margin-top:15px;
     display:grid;
-    margin-left:3.5cm;
+    margin-left:6cm;
 }
 #dft_example_caption{
     color:rgba(204, 207, 210, 0.409);
@@ -131,5 +131,30 @@ ul li a:hover {
     text-decoration: none
 }
 #dft_example_caption a:hover{
+    color:rgb(37, 152, 184)
+}
+
+#dft_script_link{
+    text-decoration: none;
+    color:rgba(147, 243, 195, 0.651)
+}
+#dft_script_link:hover{
+    color:rgb(37, 152, 184)
+}
+
+#dft_sampling_figure{
+    margin-top:15px;
+    display:grid;
+    margin-left:3cm;
+}
+#dft_sampling_caption{
+    color:rgba(204, 207, 210, 0.409);
+    font-size: 11px
+}
+#dft_sampling_caption a{
+    color:rgba(204, 207, 210, 0.409);
+    text-decoration: none
+}
+#dft_sampling_caption a:hover{
     color:rgb(37, 152, 184)
 }

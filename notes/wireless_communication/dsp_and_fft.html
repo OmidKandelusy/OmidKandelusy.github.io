@@ -44,6 +44,8 @@
                 </figure>
 
                 <div id="note_div_1" >
+                    <h3>Sampling and digitalization!</h3>
+
                     The digital signal processing of the real time analogue signals pivots around the sampling and quantization of the original time-continuous
                     signal. A typical ideal analogue to digital convertor with a sampling frequency of \(F_s\) (Hz) or sampling period of \(T_s\) (Seconds) is usually 
                     mathematically expressed via the convolution of impulse train with an analogue signal \(g(t)\) as
@@ -55,14 +57,62 @@
 
                     where \(\omega\) is the angular frequency for the discrete transform domain. There are several important nuances that can be inferred from this 
                     equation relating the continuous frequency domain \(f\) in Hz to the angular and periodic frequency domain \(\omega\) in radian that can be discussed
-                    easily through the simple example below.
+                    easily through the simple example below. Let's investigate the Fourier transform of the quantized sinusoid analogue signal given by
+                    \[ g(t) = A\cos({2\pi\omega_0 t}) u(t) \]
+                    
+                    which can be illustrated as 
+                    
+                    <figure id="dft_example_figure">
+                        <img id="dft_example_image" src="notes/dsp_fft_spectrum_example.png", alt="power_spectrum", height="300", width="320">
+                        <figcaption id="dft_example_caption"> discrete and continuous frequency domain of the transformed signals</figcaption>
+                    </figure>
+                
+                    As can be seen, the original Fourier transform of the analogue signal can be retrieved from the Fourier transform of the discretized
+                    signal \(\hat{g}[n]\). Specifically, we only need to filter out the first replica of the periodic transformed signal as highlighted 
+                    by the red rectangle. Thus, we can map the frequency-domain signal processing on the continuous signals onto the discrete domain which
+                    can be done via computers and digital computation. Evidently, in order to avoid aliasing and signal distortion we have the following 
+                    well known Nyquist sampling criterion to adhere to
+                    \[T_s\omega_0 < 2\pi - T_s\omega_0 \longrightarrow \boxed{F_s > 2\omega_0}\]
 
+                    However, as the discrete time fourier transform of the sampled signals shows, the frequency domain transformed signal is a continuous
+                    function of the angular frequency \(\omega\):
+                    \[ X(e^{j\omega}) = \frac{1}{N} \sum_{n=0}^{N-1} x[n]e^{-j\omega n }\]
+                    
+                    This continuous signal is a problem when comes to digital processing in the frequency domain. 
+                    <h3>DFT instead of DTFT</h3>
 
-                <figure id="dft_example_figure">
-                    <img id="dft_example_image" src="notes/dsp_fft_spectrum_example.png", alt="power_spectrum", height="300", width="320">
-                    <figcaption id="dft_example_caption"> discrete and continuous frequency domain of the transformed signals</figcaption>
-                </figure>
+                    To address this challenge, we use the discrete time Fourier transform or DFT in abbreviated form. DFT is a sequency of complex values
+                    at specific multiplication of a base frequency. In other words, the DFT is just a tool to enable digital processing in the frequency
+                    domain. The DFT revolves around the relation between the discrete Fourier series coefficients and DTFT of the periodic signals. Long
+                    story short, if we take a given finite discrete signal \(x[n]\) and assume it is periodic with a period of \(N\), we can define the
+                    DFT for the periodic version \(\tilde{x}[n]\) as 
+                    \[ X[k] = \frac{1}{N} \sum_{n=0}^{N-1} x[n] e^{-j2\pi k \frac{n}{N}} \quad \text{where } k=0,..., N-1 .\]
 
+                    Here, we can easily build the frequency axis with digital computation as it is just integer multiplication of a based frequency
+                    value given by \(2\pi/N\). Now, the only question left to answer is that how the DFT frequency bins that build up the DFT of the
+                    signal relate to the sampling frequency that is used for quantization of the original analogue signal into the discrete version.
+
+                    <h3> DFT and sampling frequency</h3>
+
+                    This is a very important nuance which is commonly neglected in text books and tutorials. As mentioned above, the physical frequency
+                    axis of the original continuous signal and the sampled signal is related as \(\Omega = \frac{\omega}{T_s}\). Therefore, each frequency
+                    bin of the DFT corresponds to \(\frac{F_s}{N}\). It follows that the DFT transform of the signal must contain both sides of the negative
+                    and positive frequency contents laid out as integer multiplication of the base frequency bin as
+                    \[\text{physical frequency :=} \frac{kF_s}{N}, \quad \text{where  } k=0,...,N-1\]
+
+                    Here, since the DTFT frequency axis is limited to \([0, 2\pi]\), based on the fact that \(N\) is even or odd, the first half of the 
+                    DFT sequence members belong to the positive frequency range inclusively, and the rest to the negative range. This particularly important, when we
+                    want to accurately represent the continuous Fourier transfer of the original signal via the DFT. This can be illustrated using a simple 
+                    example for a time domain analogue signal that was sampled into a discrete signal with a sampling frequency of 1 KHz where the original function is
+                    \[x(t) = \cos\left(200\pi t\right) \]
+                
+                    Using a <a id=dft_script_link href="https://github.com/OmidKandelusy/Python/tree/main/common_applications/dft">simple python script</a>, we can demonstrate the raw DFT of the digitalized signal and the physical representation of the actual continuous
+                    Fourier transform of the original continuous signal as 
+
+                    <figure id="dft_sampling_figure">
+                        <img id="dft_sampling_image" src="notes/dft_sampling.png", alt="dft_sampling", height="460", width="520">
+                        <figcaption id="dft_sampling_caption"> raw dft samples and continuous representation</figcaption>
+                    </figure>
 
                 </div>
 
