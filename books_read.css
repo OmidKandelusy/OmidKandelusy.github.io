@@ -90,6 +90,28 @@ nav ul li a:hover {
     text-align: justify; 
 }
 
+#awol_on_at_container{
+    margin-top:20px;
+    border-radius: 20px;
+    border-color: #746675b4;
+    border-style: dotted;
+    border-width: 1px;
+    width: 750px;
+    height: 330px;
+}
+#awol_on_at_picture{
+    float: right;
+    margin: 30px 10px 10px 10px;
+}
+#awol_on_at_body{
+    font-family: 'baskerville old face';
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(184, 177, 177);
+    margin: 25px 10px 12px 12px;
+    text-align: justify; 
+}
+
 footer {
     text-align: center;
     padding: 2px 0;
