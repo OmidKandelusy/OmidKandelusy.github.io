@@ -6,6 +6,7 @@
     <title>channel capacity</title>
     <link rel="stylesheet" href="channel_capacity.css">
     <base href="../../images/">
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
@@ -23,17 +24,40 @@
 
             <div id="note_container">
 
-                <h1 id="page_title">A brief note on communicatoin channel<h1>
+                <h1 id="page_title">A note on communication channel<h1>
 
                 <p id="note_p1" >  
+                    The image of the big pipe is intentional. The communication channel is nothing
+                    but a big invisible pipe throught the thin air. There is certain limitation on
+                    how much stuff one can funnel through the pipe and similarly, there is a certain
+                    amount of 'frequency content' one can circulate through the communication channel!
+                    In this short note, I summarize a coherent and tractable account on the theoretical
+                    grounds on which the gigantic world of communication and information transfer is
+                    revolving. There are several interesting and beautiful concepts in this realm including
+                    entropy, mutual information, capacity, bandwidth, channel use that are essential 
+                    building blocks of a science that we know as the 'information theory'.
 
                 </p>
 
 
                 <figure id="channel_capacity_topstory_figure">
-                    <img id="channel_capacity_topstory_image" src="notes/channel_capacity_topstory_image.jpg", alt="channel_capacity", height="320", width="500">
+                    <img id="channel_capacity_topstory_image" src="notes/channel_capacity_topstory_image.jpg", alt="channel_capacity", height="290", width="420">
                     <figcaption id="channel_capacity_topstory_caption"> <a href="https://commons.wikimedia.org/wiki/File:Big_Inch_pipe,_welding_using_roll-weld_method.jpg" target="_blank">link to image curtesy</a> </figcaption>
                 </figure>
+
+
+                <div id="note_p2">   
+                    Before anything, we need to first determine how we can quantify information. Claud 
+                    Shanon and hist collegue Fanou, dedicating themself to the very same cause at the MIT,
+                    developed a concept based on entropy to create a mathematical framework to quantify the
+                    information. Considering the fact that information roots in 'uncertainty', it is natuaral
+                    to quantify the amount of information based on its uncertainty. Building upon the same notion, Shanon defined the entropy for the 
+                    event \(x\) in terms of its probability \(p\) as
+
+                                        \[H(x) = -p \log_2(p)\quad \text{bits} \]
+                    
+                </div>
+
 
                 <div id="note_div_1" >
 

@@ -105,6 +105,19 @@ ul li a:hover {
 }
 
 
+#note_p2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight:normal;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(184, 177, 177);
+    margin: 10px 10px 12px 12px;
+    text-align: justify; 
+    width: 100%;
+}
+
+
+
 #note_div_1{
     font-family: 'Times New Roman', Times, serif;
     font-weight:normal;
